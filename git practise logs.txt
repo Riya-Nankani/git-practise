@@ -175,3 +175,88 @@ To https://github.com/Riya-Nankani/git-practise.git
 C:\git-practise>cat README.md
 'cat' is not recognized as an internal or external command,
 operable program or batch file.
+
+
+
+
+
+############################ USING PR(PULL REQUEST) NOTES  ################################
+PART 2: Branching → PR → Review (NO FORK YET)
+
+We’ll first do this on your own repo so concepts are crystal clear.
+Then we’ll do fork-based flow (industry standard).
+
+--> STEP 1️ Create a Feature Branch (LOCAL)
+Inside your repo:
+git branch
+
+You should see:
+* main
+
+Now create a feature branch:
+git checkout -b feature/add-git-notes
+
+Check:
+git branch
+
+Output:
+* feature/add-git-notes
+  main
+
+
+✅ You are now on a feature branch
+
+--> STEP 2️ Make Changes on Feature Branch
+Edit README.md (use Notepad / VS Code):
+Add:
+### Git Commands
+- git status
+- git add
+- git commit
+- git push
+
+Save file.
+
+Now:
+git status
+git add README.md
+git commit -m "Added basic git commands notes"
+
+--> STEP 3️ Push Feature Branch to GitHub
+git push origin feature/add-git-notes
+
+--> STEP 4️ Create Pull Request (PR)
+On GitHub:
+Open your repo
+You’ll see “Compare & Pull Request”
+Click it
+
+OR manually:
+
+Base: main
+Compare: feature/add-git-notes
+
+Fill PR:
+Title: Add git command notes
+Description: Added basic git commands for learning
+Click Create Pull Request
+
+--> STEP 5️ Review & Merge PR
+Since you own the repo:
+Scroll down
+Click Merge Pull Request
+Confirm merge
+
+🎉 Code is now merged into main
+
+--> STEP 6️ Sync Local Main Branch
+After merge, your local main is outdated.
+git checkout main
+git pull origin main
+
+
+Now:
+git log --oneline
+
+
+You’ll see merged commit.
