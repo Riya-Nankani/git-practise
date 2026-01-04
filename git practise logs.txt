@@ -1,0 +1,177 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP>cd ..
+
+C:\Users>cd ..
+
+C:\>cd git-practise
+
+C:\git-practise>git init
+Initialized empty Git repository in C:/git-practise/.git/
+
+C:\git-practise>
+C:\git-practise>ls -a
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\git-practise>dir
+ Volume in drive C has no label.
+ Volume Serial Number is B84D-B380
+
+ Directory of C:\git-practise
+
+04-01-2026  13:37    <DIR>          .
+04-01-2026  13:37    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  329,919,881,216 bytes free
+
+C:\git-practise>echo
+ECHO is on.
+
+C:\git-practise>
+C:\git-practise>echo "## Git practise repo" > README.md
+
+C:\git-practise>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\git-practise>git add README.md
+
+C:\git-practise>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+C:\git-practise>git commit -m "Initial commit with README"
+[master (root-commit) cb76dbb] Initial commit with README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\git-practise>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\git-practise>git remote add origin git@github.com:Riya-Nankani/git-practise.git
+
+C:\git-practise>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\git-practise>git remote -v
+origin  git@github.com:Riya-Nankani/git-practise.git (fetch)
+origin  git@github.com:Riya-Nankani/git-practise.git (push)
+
+C:\git-practise>git branch -M main
+
+C:\git-practise>git branc
+git: 'branc' is not a git command. See 'git --help'.
+
+C:\git-practise>git branch
+* main
+
+C:\git-practise>^Bgit push -u origin main
+'☻git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\git-practise>git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\git-practise>git remote add origin https://github.com/Riya-Nankani/git-practise.git
+error: remote origin already exists.
+
+C:\git-practise>git remote -v
+origin  git@github.com:Riya-Nankani/git-practise.git (fetch)
+origin  git@github.com:Riya-Nankani/git-practise.git (push)
+
+C:\git-practise>git remote remove origin
+
+C:\git-practise>git remote -v
+
+C:\git-practise>git branch
+* main
+
+C:\git-practise>git remote add origin https://github.com/Riya-Nankani/git-practise.git
+
+C:\git-practise>git remote -v
+origin  https://github.com/Riya-Nankani/git-practise.git (fetch)
+origin  https://github.com/Riya-Nankani/git-practise.git (push)
+
+C:\git-practise>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 251 bytes | 83.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Riya-Nankani/git-practise.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\git-practise>
+C:\git-practise>echo "## Git learning basics" > README.md
+
+C:\git-practise>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\git-practise>git diff
+diff --git a/README.md b/README.md
+index 50266de..6c40951 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1 @@
+-"## Git practise repo"
++"## Git learning basics"
+
+C:\git-practise>git add README.md
+
+C:\git-practise>
+C:\git-practise>git commit -m "2nd Commit"
+[main aac0483] 2nd Commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\git-practise>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\git-practise>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 269 bytes | 89.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Riya-Nankani/git-practise.git
+   cb76dbb..aac0483  main -> main
+
+C:\git-practise>cat README.md
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
