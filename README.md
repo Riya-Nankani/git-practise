@@ -8,5 +8,6 @@
 - git commit -m "test"
 - git push
 - git fetch
-- git remote -v
-  
+- git diff main
+- git push origin feature/11
+
